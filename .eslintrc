@@ -7,7 +7,10 @@
         "plugin:react/recommended",
         "airbnb",
         "next", 
-        "next/core-web-vitals"
+        "next/core-web-vitals",
+        "eslint-config-prettier",
+        "prettier",
+        "prettier/react"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -19,8 +22,16 @@
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "eslint-config-prettier"
     ],
     "rules": {
+      "prettier/prettier": "error",
+      "react/jsx-filename-extension": [
+        "warn",
+        { "extensions": [".js", ".jsx", ".ts", ".tsx"]}
+      ],
+      "import/prefer-default-export": "off",
+      "jsx-quotes": ["error", "prefer-single"]
     }
 }
